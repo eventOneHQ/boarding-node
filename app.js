@@ -40,16 +40,30 @@ app.use('/assets', express.static('assets'))
 
 app.locals.gaPropertyId = config.gaPropertyId
 app.locals.privacyUrl = config.privacyUrl
+app.locals.authToken = config.authToken
 
 app.get('/', async (req, res) => {
   const app = await getApp()
-  return res.render('home', { app })
+  return res.render('home', { app, query: req.query })
 })
 
-app.post('/submit', async (req, res) => {
+const submitCtrl = async (req, res) => {
+  const email = req.body.email || req.query.email
+  const firstName = req.body.firstName || req.query.firstName
+  const lastName = req.body.lastName || req.query.lastName
+  const token = req.body.token || req.query.token
+
   try {
     const app = await getApp()
-    const { email, firstName, lastName } = req.body
+
+    if (config.authToken && config.authToken !== token) {
+      return res.status(401).render('submit', {
+        app,
+        alertType: 'danger',
+        message:
+          'Invalid password given, please contact the application owner and <a href="/">try again</a>. '
+      })
+    }
     await tf.addTester(email, firstName, lastName)
 
     return res.render('submit', {
@@ -61,12 +75,15 @@ app.post('/submit', async (req, res) => {
   } catch (err) {
     console.log(err)
     return res.status(500).render('submit', {
-      code: 'InternalServerError',
+      app,
       alertType: 'danger',
-      message: 'An internal server error has occurred'
+      message: 'Something went wrong, please contact the application owner'
     })
   }
-})
+}
+
+app.post('/submit', submitCtrl)
+app.get('/submit', submitCtrl)
 
 app.listen(config.port, () => {
   console.log(`App listening at: http://localhost:${config.port}`)

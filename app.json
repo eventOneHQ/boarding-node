@@ -23,6 +23,11 @@
       "description": "Optional: The group you want the invited to be placed in",
       "required": false
     },
+    "AUTH_TOKEN": {
+      "description":
+        "Optional: Set a password to protect your website from random people signing up.",
+      "required": false
+    },
     "GA_PROPERTY_ID": {
       "description":
         "Optional: Configure Google Analytics to track visitors on your website.",

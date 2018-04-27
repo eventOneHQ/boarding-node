@@ -19,6 +19,13 @@
         <input type="email" id="inputEmail" name="email" class="form-control" placeholder="Email Address" required>
     </div>
 
+    {{#if authToken}}
+    <div class="form-group">
+        <label for="inputToken">Password</label>
+        <input type="password" id="inputToken" name="token" class="form-control" placeholder="Password" value="{{query.token}}" required>
+    </div>
+    {{/if}}
+
     <input class="btn btn-lg btn-primary btn-block" id="submit" type="submit" value="Get Beta Access"></input>
 </form>
 
