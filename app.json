@@ -1,0 +1,37 @@
+{
+  "name": "Boarding Node",
+  "description":
+    "The easiest way to invite your TestFlight beta testers. The App Name is the name of the Heroku application, not the name of your app.",
+  "repository": "https://github.com/filiosoft/boarding-node",
+  "keywords": ["Testflight", "filiosoft", "invite"],
+  "website": "https://github.com/filiosoft/boarding-node",
+  "env": {
+    "ITC_USER": {
+      "description": "Your iTunes Connect username",
+      "required": true
+    },
+    "ITC_PASSWORD": {
+      "description": "Your iTunes Connect password",
+      "required": true
+    },
+    "ITC_APP_ID": {
+      "description":
+        "The App ID or App Identifier (Bundle Identifier) of your app from iTunes Connect, to which the tester will be invited.",
+      "required": true
+    },
+    "ITC_APP_TESTER_GROUP": {
+      "description": "Optional: The group you want the invited to be placed in",
+      "required": false
+    },
+    "GA_PROPERTY_ID": {
+      "description":
+        "Optional: Configure Google Analytics to track visitors on your website.",
+      "required": false
+    },
+    "PRIVACY_URL": {
+      "description":
+        "Optional: URL to privacy policy. The link is shown on the invite page.",
+      "required": false
+    }
+  }
+}

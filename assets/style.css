@@ -1,0 +1,42 @@
+html,
+body {
+  height: 100%;
+}
+
+body {
+  display: -ms-flexbox;
+  display: -webkit-box;
+  display: flex;
+  padding-bottom: 40px;
+}
+
+.wrapper {
+  width: 100%;
+  max-width: 330px;
+  padding: 15px;
+  margin: 0 auto;
+}
+
+.appIcon {
+  -webkit-border-radius: 22.544%;
+  -moz-border-radius: 22.544%;
+  -ms-border-radius: 22.544%;
+  border-radius: 22.544%;
+
+  width: 256px;
+}
+
+#submit {
+  margin-bottom: 20px;
+}
+
+.footer {
+  color: #888;
+}
+@media screen and (min-width: 800px) {
+  .footer {
+    position: absolute;
+    bottom: 10px;
+    right: 25px;
+  }
+}
