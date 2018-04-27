@@ -53,12 +53,17 @@ const submitCtrl = async (req, res) => {
   const lastName = req.body.lastName || req.query.lastName
   const token = req.body.token || req.query.token
 
+  let itcApp
   try {
-    const app = await getApp()
+    itcApp = await getApp()
+  } catch (err) {
+    console.log(err)
+  }
 
+  try {
     if (config.authToken && config.authToken !== token) {
       return res.status(401).render('submit', {
-        app,
+        app: itcApp,
         alertType: 'danger',
         message:
           'Invalid password given, please contact the application owner and <a href="/">try again</a>. '
@@ -67,7 +72,7 @@ const submitCtrl = async (req, res) => {
     await tf.addTester(email, firstName, lastName)
 
     return res.render('submit', {
-      app,
+      app: itcApp,
       alertType: 'success',
       message:
         'Successfully added you as a tester. Check your email inbox for an invite'
@@ -75,7 +80,7 @@ const submitCtrl = async (req, res) => {
   } catch (err) {
     console.log(err)
     return res.status(500).render('submit', {
-      app,
+      app: itcApp,
       alertType: 'danger',
       message: 'Something went wrong, please contact the application owner'
     })
