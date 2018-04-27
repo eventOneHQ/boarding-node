@@ -1,4 +1,4 @@
-# Boarding Node
+# Boarding Node [![Build Status](https://travis-ci.org/Filiosoft/boarding-node.svg?branch=master)](https://travis-ci.org/Filiosoft/boarding-node)
 
 A clone of [Fastlane Boarding](https://github.com/fastlane/boarding) built with Node.js!
 
