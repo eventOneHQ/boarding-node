@@ -11,7 +11,8 @@ const config = {
   gaPropertyId: env.GA_PROPERTY_ID,
   appName: env.APP_NAME,
   privacyUrl: env.PRIVACY_URL,
-  port: env.PORT || 3000
+  port: env.PORT || 3000,
+  app: {}
 }
 
 module.exports = config
