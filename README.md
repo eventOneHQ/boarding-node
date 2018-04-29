@@ -2,6 +2,9 @@
 
 A clone of [Fastlane Boarding](https://github.com/fastlane/boarding) built with Node.js!
 
+# Why?
+At Filiosoft, we are building a conference app platform and we needed a way to integrate TestFlight beta invites into the platform. [Fastlane Boarding](https://github.com/fastlane/boarding) was great but we use Node.js primarily. So we created a clone of it built in Node.js and then decided to open source it. 
+
 # Getting Started
 
 To get started, follow these steps:
