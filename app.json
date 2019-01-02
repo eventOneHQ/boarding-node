@@ -2,9 +2,9 @@
   "name": "Boarding Node",
   "description":
     "The easiest way to invite your TestFlight beta testers. The App Name is the name of the Heroku application, not the name of your app.",
-  "repository": "https://github.com/filiosoft/boarding-node",
-  "keywords": ["Testflight", "filiosoft", "invite"],
-  "website": "https://github.com/filiosoft/boarding-node",
+  "repository": "https://github.com/eventOneHQ/boarding-node",
+  "keywords": ["Testflight", "eventOne", "invite"],
+  "website": "https://github.com/eventOneHQ/boarding-node",
   "env": {
     "ITC_USER": {
       "description": "Your iTunes Connect username",

@@ -1,4 +1,4 @@
-# Boarding Node [![Build Status](https://travis-ci.org/Filiosoft/boarding-node.svg?branch=master)](https://travis-ci.org/Filiosoft/boarding-node) [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com) [![GitHub license](https://img.shields.io/github/license/Filiosoft/boarding-node.svg)](https://github.com/Filiosoft/boarding-node/blob/master/LICENSE) [![GitHub tag](https://img.shields.io/github/release/Filiosoft/boarding-node.svg)](https://github.com/Filiosoft/boarding-node)
+# Boarding Node [![Build Status](https://travis-ci.org/eventOneHQ/boarding-node.svg?branch=master)](https://travis-ci.org/eventOneHQ/boarding-node) [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com) [![GitHub license](https://img.shields.io/github/license/eventOneHQ/boarding-node.svg)](https://github.com/eventOneHQ/boarding-node/blob/master/LICENSE) [![GitHub tag](https://img.shields.io/github/release/eventOneHQ/boarding-node.svg)](https://github.com/eventOneHQ/boarding-node)
 
 A clone of [Fastlane Boarding](https://github.com/fastlane/boarding) built with Node.js!
 
@@ -10,7 +10,7 @@ To get started, follow these steps:
 * Enter your configuration
 * Click "Deploy app"
 
-[![Deploy](https://www.herokucdn.com/deploy/button.png)](https://www.heroku.com/deploy?template=https://github.com/filiosoft/boarding-node)
+[![Deploy](https://www.herokucdn.com/deploy/button.png)](https://www.heroku.com/deploy?template=https://github.com/eventOneHQ/boarding-node)
 
 ## Security
 

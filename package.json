@@ -15,7 +15,7 @@
     "preversion": "npm test",
     "postversion": "git push && git push --tags && npm run github-release"
   },
-  "author": "Filiosoft Labs <opensource@filiosoft.com>",
+  "author": "eventOne Labs <opensource@event1.io>",
   "license": "MIT",
   "devDependencies": {
     "commitizen": "^2.9.6",
